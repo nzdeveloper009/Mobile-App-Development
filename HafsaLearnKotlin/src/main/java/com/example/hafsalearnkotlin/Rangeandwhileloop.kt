@@ -1,4 +1,5 @@
 package com.example.hafsalearnkotlin
+//count down using do while loop
 fun main(){
     var num=2
     var index=1

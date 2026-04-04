@@ -25,3 +25,4 @@ dependencyResolutionManagement {
 rootProject.name = "Mobile App Development"
 include(":app")
 include(":NokhaizLearnKotlin")
+include(":GullFatimaLearnKotlin")

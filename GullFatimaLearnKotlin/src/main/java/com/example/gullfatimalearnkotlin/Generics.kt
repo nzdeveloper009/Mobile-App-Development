@@ -8,7 +8,7 @@ fun main() {
     val num=conatiner(123)
     println(num.getValue())
 
-    add(1,2,4,5,22,2,2,9)
+    additionInt(1,2,4,5,22,2,2,9)
 
 }
 
@@ -24,7 +24,7 @@ class conatiner<T>(var data:T)
     }
 
 }
-fun add(vararg values:Int )
+fun additionInt(vararg values:Int )
 {
     var sum:Int=0
     for(i in values){

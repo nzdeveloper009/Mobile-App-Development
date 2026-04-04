@@ -17,7 +17,7 @@ fun subbtract(a:Int,b:Int):Int=a-b
 
 fun calculator(a:Int,b:Int,fn:(Int,Int)->Int)
 {
-  var operators=listOf<String>("+","-","*","/")
+    var operators=listOf<String>("+","-","*","/")
 
     if(operators.contains("+"))
     {

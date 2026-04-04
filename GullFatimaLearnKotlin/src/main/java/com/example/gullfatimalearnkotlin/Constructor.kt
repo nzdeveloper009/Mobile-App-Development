@@ -2,19 +2,19 @@ package com.example.gullfatimalearnkotlin
 
 fun main()
 {
-    var c1= calculator()
+    var c1= Calculator()
     c1.add(23,4)
     var std1=Students("Asad","24011519-010",19,24,4)
     var std2=Students("Riya","24011519-011",21,23,6)
     std1.display()
     println(std2.name)
-    var p1=PersonL("Gull")
-    var p2=PersonL("amal",17)
+    var p1=PERSON("Gull")
+    var p2=PERSON("amal",17)
 }
 
 //default constructor will be called.
 //default constructor has zero parameter
-class calculator
+class Calculator
 {
     fun add(a:Int, b:Int)
     {
@@ -33,7 +33,7 @@ class Students(var name:String,val RollNo:String, var Age:Int, val batch:Int, va
     }
 }
 
-open class PersonL
+open class PERSON
 {
     var name:String=""
     var age:Int=0

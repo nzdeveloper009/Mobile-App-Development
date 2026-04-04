@@ -1,19 +1,19 @@
 package com.example.gullfatimalearnkotlin
 
-open class Animal{
+open class AnimaL{
     open fun sound(){
         println("Animal makes a sound")
     }
 }
 
-class Dog: Animal(){
+class DoG: AnimaL(){
     override fun sound(){
         super.sound()
         println("Dog barks")
     }
 }
 
-class cat:Animal()
+class caT:AnimaL()
 {
     override fun sound() {
         super.sound()
@@ -22,9 +22,9 @@ class cat:Animal()
 }
 
 fun main(){
-    val d = Dog()
+    val d = DoG()
     d.sound()
-    val c=cat()
+    val c=caT()
     c.sound()
 
 }

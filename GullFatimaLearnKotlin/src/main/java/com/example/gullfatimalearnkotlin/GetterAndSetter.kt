@@ -1,18 +1,18 @@
 package com.example.gullfatimalearnkotlin
 
 fun main() {
-    var emp1= Employee()
+    var emp1= EmployEE()
     emp1.name="Gull"
     emp1.age=-1
     emp1.ID=111
-    var emp2= Employee()
+    var emp2= EmployEE()
     emp2.name="Riya"
     emp2.age=20
     emp2.ID=101
     emp2.display()
     emp1.display()
 }
-class Employee(){
+class EmployEE(){
     var name:String=""
         get()
         {

@@ -22,6 +22,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "MOBILE APP DEVELOPMENT"
+rootProject.name = "Mobile App Development"
 include(":app")
-include(":imanlearnkotlin")
+include(":NokhaizLearnKotlin")
+include(":GullFatimaLearnKotlin")

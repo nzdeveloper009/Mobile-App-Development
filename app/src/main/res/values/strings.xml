@@ -1,3 +1,7 @@
 <resources>
+<<<<<<< HEAD
     <string name="app_name">MOBILE APP DEVELOPMENT</string>
+=======
+    <string name="app_name">Mobile App Development</string>
+>>>>>>> origin/main
 </resources>

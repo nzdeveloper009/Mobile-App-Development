@@ -11,15 +11,15 @@ class SchoolStudent : Human() {
     }
 }
 
-// Teacher class implements the abstract method
-class Teacher : Human() {
+// SchoolTeacher class implements the abstract method
+class SchoolTeacher : Human() {
     override fun work() {
         println("Teacher teaches students in class.")
     }
 }
 
 fun main() {
-    val humans: List<Human> = listOf(SchoolStudent(), Teacher())
+    val humans: List<Human> = listOf(SchoolStudent(), SchoolTeacher())
 
     for (human in humans) {
         human.work()

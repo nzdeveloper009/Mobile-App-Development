@@ -1,5 +1,5 @@
 package com.example.hafsalearnkotlin
-class Student(private var name: String, private var age: Int) {
+class BasicStudent(private var name: String, private var age: Int) {
     // Getter for name
     fun getName(): String {
         return name
@@ -51,8 +51,8 @@ class Course(private var title: String, private var duration: Int) {
 }
 
 fun main() {
-    // Create Student object using constructor
-    val student1 = Student("Ali", 20)
+    // Create BasicStudent object using constructor
+    val student1 = BasicStudent("Ali", 20)
 
     // Use getters and setters
     println("Student name: ${student1.getName()}")

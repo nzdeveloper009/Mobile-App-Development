@@ -46,12 +46,12 @@ class Doctor : Worker {
 }
 
 // Another interface to show multiple inheritance
-interface Person {
+interface Individual {
     fun introduce()
 }
 
 // Engineer implements two interfaces
-class Engineer : Worker, Person {
+class Engineer : Worker, Individual {
     override val role: String = "Engineer"
 
     override fun doWork() {

@@ -3,21 +3,21 @@ package com.example.hafsalearnkotlin
 // Base class
 open class Person(val name: String)
 
-// Subclass Student
-class Student(name: String, val grade: Int) : Person(name)
+// Subclass SmartStudent
+class SmartStudent(name: String, val grade: Int) : Person(name)
 
-// Subclass Teacher
-class Teacher(name: String, val subject: String) : Person(name)
+// Subclass SmartTeacher
+class SmartTeacher(name: String, val subject: String) : Person(name)
 
 fun describePerson(person: Person) {
     // Type checking with 'is' and smart casting
     when (person) {
-        is Student -> {
-            // Smart cast: person is automatically treated as Student
+        is SmartStudent -> {
+            // Smart cast: person is automatically treated as SmartStudent
             println("${person.name} is a student in grade ${person.grade}.")
         }
-        is Teacher -> {
-            // Smart cast: person is automatically treated as Teacher
+        is SmartTeacher -> {
+            // Smart cast: person is automatically treated as SmartTeacher
             println("${person.name} is a teacher of ${person.subject}.")
         }
         else -> {
@@ -28,8 +28,8 @@ fun describePerson(person: Person) {
 
 fun main() {
     val people: List<Person> = listOf(
-        Student("Ali", 10),
-        Teacher("Sara", "Math"),
+        SmartStudent("Ali", 10),
+        SmartTeacher("Sara", "Math"),
         Person("John")
     )
 
@@ -38,8 +38,8 @@ fun main() {
     }
 
     // Example of explicit type check
-    val someone: Person = Student("Mary", 12)
-    if (someone is Student) {
+    val someone: Person = SmartStudent("Mary", 12)
+    if (someone is SmartStudent) {
         // Smart cast: no need to manually cast
         println("Smart cast works: ${someone.grade}")
     }

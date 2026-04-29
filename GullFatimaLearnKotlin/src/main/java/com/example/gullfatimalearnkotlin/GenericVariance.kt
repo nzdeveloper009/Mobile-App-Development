@@ -7,23 +7,24 @@ package com.example.gullfatimalearnkotlin
 
 open class Fish
 class Shark : Fish()
-class Tuna : Fish()
 
-class FishCollection< T>(val b: T)
+class FishCollection<T>(val b: T) {
 
-fun showFish(b: FishCollection<Fish>) {
-    println(b.b)
+    fun showFish(b: FishCollection<Fish>) {
+        println(b.b)
+    }
 }
-
 fun main() {
-    val sharkCollection: FishCollection<Shark> =
-        FishCollection(Shark())
-     val fishCollection: FishCollection<Fish> =
-        FishCollection(Fish())
-    showFish(fishCollection)
+    val sharkCollection: FishCollection<Shark> = FishCollection(Shark())
+    val fishCollection: FishCollection<Fish> = FishCollection(Fish())
+    sharkCollection.showFish(fishCollection)
    // showFish(sharkCollection)
-    //error because fishCollection<fish> is not equal to fishCollection<shark>
+   //error because fishCollection<fish> is not equal to fishCollection<shark>
    //function is expecting fishCollection<fish> but got fishCollection<shark>
+
+
+    val apple1: Box<Apple> = Box(Apple());
+    val banana: Box<Fruits> = Box(Apple())
 
 }
 
@@ -31,7 +32,7 @@ fun main() {
 open class Fruits{
 }
 
-class Apple(val name:String):Fruits()
+class Apple:Fruits()
 {
 }
 
@@ -44,4 +45,6 @@ fun show(b: Box <Fruits>){
     println(b)
 
 }
+
+
 

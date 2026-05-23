@@ -3,6 +3,7 @@ package com.example.gullapplication
 import android.graphics.fonts.FontStyle
 import android.os.Build
 import androidx.annotation.RequiresApi
+import androidx.compose.foundation.basicMarquee
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Text
@@ -17,6 +18,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
@@ -79,10 +81,48 @@ fun Colorful() {
     }
 }
 
+@Composable
+fun Scrollable()
+{
+    Box(
+        modifier = Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    )
+    {
+        Text(text=" hey this is Gull Experimenting jet pack compose",
+            modifier = Modifier.basicMarquee(),
+            fontSize = 50.sp
+        )
+
+    }
+}
+
+
+@Composable
+fun overflowTest()
+{
+    Box(
+        modifier= Modifier.fillMaxSize(),
+        contentAlignment = Alignment.Center
+    )
+    {
+        Text(text="hey this is Gull Experimenting jet pack compose. hey this is Gull Experimenting jet pack compose.",
+            maxLines = 2, //max 2 lines per text aae ga agy... ->which will indicate ky agy text hai abhi
+            fontSize = 50.sp,
+            overflow= TextOverflow.Ellipsis,
+        )
+
+    }
+
+}
+
+
 
 @Preview(showBackground = true)
 @Composable
 fun SimpleTextPreview(){
     //SimpleText()
-    Colorful()
+    //Colorful()
+    //Scrollable()
+    overflowTest()
 }
